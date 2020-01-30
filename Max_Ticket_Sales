@@ -1,0 +1,18 @@
+# problem to find movies max tickets sales
+
+def find_max_sales(movie_list):
+    current_max_movie=""
+    current_max_sales=-1
+    for movie_tuple in movie_list:
+        if movie_tuple[1] > current_max_sales:
+            current_max_sales=movie_tuple[1]
+            current_max_movie=movie_tuple[0]
+
+    return current_max_movie
+
+
+
+movie_list = [("Finding Dory", 486), ("Captain America: Civil War", 408), ("Deadpool", 363), ("Zootopia", 341),
+                      ("Rogue One", 529), ("The Secret Life of Pets", 368), ("Batman v Superman", 330), ("Sing", 268),
+                      ("Suicide Squad", 325), ("The Jungle Book", 364)]
+print(find_max_sales(movie_list))
